@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBook {
-    ArrayList<Contact> arrayList = new ArrayList<>();
+    ArrayList<Contact> contactList = new ArrayList<>();
+    Contact contact = new Contact();
+
     public void addContacts() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Firstname");
@@ -21,7 +23,6 @@ public class AddressBook {
         String mobileNumber = sc.next();
         System.out.println("email id");
         String emailId = sc.next();
-        Contact contact = new Contact();
         contact.setFirstName(firstName);
         contact.setLastName(lastname);
         contact.setCity(city);
@@ -29,6 +30,16 @@ public class AddressBook {
         contact.setEmailId(emailId);
         contact.setMobileNumber(mobileNumber);
         contact.setZipCode(zipcode);
-        arrayList.add(contact);
-    };
+        contactList.add(contact);
+    }
+    public void editContact() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the firstname of person to edit");
+        String firstName = scan.next();
+        if (contact.getFirstName().equals(firstName)) {
+            System.out.println("edit the details of person");
+        } else {
+            System.out.println("no need to edit");
+        }
+    }
 }
