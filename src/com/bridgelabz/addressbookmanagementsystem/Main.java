@@ -1,9 +1,14 @@
 package com.bridgelabz.addressbookmanagementsystem;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
-        AddressBook addressBook = new AddressBook();
-        addressBook.addContacts();
-        System.out.println(addressBook.arrayList);
+        AddressBook professionalAddressBook = new AddressBook();
+        professionalAddressBook.addContacts();
+        System.out.println(professionalAddressBook.contactList);
+        professionalAddressBook.editContact();
+        professionalAddressBook.deleteContact();
     }
 }
