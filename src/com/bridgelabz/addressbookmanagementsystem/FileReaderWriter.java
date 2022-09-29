@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 public class FileReaderWriter {
     static final String PATH = "src/Resource.properties";
-     void readTxtFile(File file) throws IOException {
+     void readTxtFile(String addressBookName) throws IOException {
+         File file = new File(PATH + addressBookName + ".txt");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String string;
         while ((string = bufferedReader.readLine()) != null)
