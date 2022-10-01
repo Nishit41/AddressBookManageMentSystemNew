@@ -1,5 +1,6 @@
 package com.bridgelabz.addressbookmanagementsystem;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -67,7 +68,7 @@ public class Main {
             }
         } while (exit);
         FileReaderWriter fileReaderWriter = new FileReaderWriter();
-//        fileReaderWriter.readTxtFile();
         fileReaderWriter.writeTxt(professionalAddressBook.contactList,PROFESSIONAL_ADDRESS_BOOK);
+        fileReaderWriter.readTxtFile(PROFESSIONAL_ADDRESS_BOOK);
     }
 }
